@@ -66,10 +66,10 @@ function aposta() {
         if (apost == '' || apost == 0) {
             alert("Insira um valor!")
         } else if (saldo == 0) {
-            alert("Seu saldo é de R$ " + saldo + " - Faça um depósito.")
+            alert("Seu saldo é de R$ " + saldo + " - Make a deposit.")
         }
         else if (apost > saldo.toFixed(2)) {
-            alert("Seu saldo é de R$ " + saldo + ' Insira um valor compatível.')
+            alert("Seu saldo é de R$ " + saldo + 'Enter a compatible value.')
         } else {
             saldo = saldo - apost;
             document.getElementById('valor').innerHTML = 'R$ ' + saldo
@@ -93,13 +93,13 @@ function aposta() {
 function para () {
     if (apostando == 1) {
         if (ganho <= 0) {
-            alert("Permitido parar com no mínimo 1 rodada jogada!")
+            alert("Allowed to stop with at least 1 round played!")
         } else {
             
             saldo = saldo+ganho;
             
             document.querySelector('#alerta').style.color = 'green'
-            document.getElementById('alerta').innerText = 'Você ganhou - R$ '+ganho.toFixed(2)  
+            document.getElementById('alerta').innerText = 'uVocê ganho - R$ '+ganho.toFixed(2)  
             document.getElementById('valor').innerHTML = 'R$ ' + saldo.toFixed(2)
             document.getElementById('btApost').innerText = 'Apostar Novamente'
             
